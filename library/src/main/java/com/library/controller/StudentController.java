@@ -21,7 +21,7 @@ import com.library.model.StudentResponceDto;
 @RestController
 @RequestMapping("/Student")
 @CrossOrigin(origins = "*")
-public class StudentApiController {
+public class StudentController {
 
 	@Autowired
 	private StudentServiceApiInterface studentServiceApiInterface;
