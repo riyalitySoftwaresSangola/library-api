@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import com.library.Entity.Book_info;
 import com.library.Entity.Book_Category;
 import com.library.model.BookRequestDTO;
+import com.library.model.BookResponceDto;
 
 @Component
 public class BookMapper {
@@ -37,4 +38,9 @@ public class BookMapper {
         book.setCategory(category);
         return book;
     }
+
+	public BookResponceDto toResponceDto(Book_info book) {
+		
+		return modelMapper.map(book, BookResponceDto.class);
+	}
 }

@@ -46,7 +46,7 @@ private StudentMapper studentMapper;
 	@Override
 	public StudentResponceDto getStudentById(int id) {
 	    Optional<StudentEntity> optional = studentRepositry.findById(id);
-	    if (!optional.isPresent()) {
+	    if (!optional.isPresent()) {	
 	        throw new RuntimeException("Student not found with ID: " + id);
 	    }
 
@@ -54,7 +54,7 @@ private StudentMapper studentMapper;
 	    return studentMapper.toResponceDto(student);  // Convert Entity → DTO
 	
 
-	}
+	}       
 
 
 
